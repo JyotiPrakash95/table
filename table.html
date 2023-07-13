@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check table</title>
+    <link rel="stylesheet" href="/">
+    <style>
+        ul {
+            list-style-type: none;
+            padding-inline-start: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 id="title"></h1>
+        <div id="demo"></div>
+    </div>
+</body>
+<script>
+    var num = prompt("Please enter your here number");
+    num = parseInt(num);
+    if (isNaN(num)) {
+        alert("Please enter a valid number.");
+    }
+    else {
+        // table start
+        var table = "<h2>Table of " + num + "</h2>";
+        table += "<ul>";
+
+        for (var i = 1; i <= 10; i++) {
+            var product = num * i;
+            table += "<li>" + product + "</li>";
+        }
+
+        table += "</ul>";
+        // table end
+
+        // table in the document
+        document.write(table);
+    }
+    //
+</script>
+
+</html>
